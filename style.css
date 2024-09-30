@@ -1,0 +1,39 @@
+/* header style */
+.mydiv{
+color:#077260 ;
+margin-left: 15px;
+}
+.top{
+    font-size: x-large;
+    color: #f6f6f2;
+    background-color: #077260;
+    padding: 20px;
+}
+.mid{
+    font-style: inherit !important;
+    font-size: medium !important ;
+}
+h1{
+    color: #077260;
+    font-style: oblique;
+}
+li{
+    font-size: large;
+    font-style: italic;
+    color: #6fb3b8;
+    background-color: #99eeb1 ;
+    width: 63px;
+}
+.body{
+    background-color: #45998e;
+}
+img{
+    margin-left: 500px;
+    margin-right: 500px;
+}
+#Return{
+    margin-left: 500px;
+    color: #077260;
+    background-color: #99eeb1;
+    padding: 10px 20px;
+ }
