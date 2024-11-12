@@ -391,6 +391,45 @@
     .nav-button:hover .menu {
       display: block;
     }
+    .center-text{
+        text-align: center;
+    }
+    .center-text h4{
+        font-size: var(--h2-font);
+        font-weight: 800;
+    }
+    .tour-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        align-items: center;
+        gap: 3rem;
+        margin-top: 5rem;
+    }
+    .box{
+        position: relative;
+    }
+    .box img{
+        width: 500px;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: brightness(70%);
+        transition: all .3s cubic-bezier(.499, .05, .55, .95);
+        will-change: filter;
+        display: block;
+    }
+    .box h4{
+        position: absolute; 
+        left: 25px;
+        bottom: 95px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .box img:hover{
+        filter: brightness(90$) hue-rotate(50deg);
+        transform: scale(1.04);
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
@@ -412,18 +451,25 @@
             </div>
           </div>
     </header>
-    <section class="home">
-        <div class="content">
-            <h1>Discover.<br><span>Cebu</span></h1>
-            <h1><Discover class="br"></Discover></h1>
-            <p>Explore the Wonders of Cebu City and Discover Amazing Sites</p>
-            <a href="destination.html">Explore Now!</a>
+    <section class="tour">
+        <div class="center-text">
+            <h1>Cebu<br><span>City</span></h1>
+            <h2><Discover class="br"></Discover></h2>
         </div>
-        <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
+        <div class="tour-content">
+            <div class="box">
+                <img src="./Images/Magellans-Cross.webp" alt="Culture">
+                <h4>Culture</h4>
+            </div>
+            <div class="box">
+                <img src="./Images/images(3).jpg" alt="Culture">
+                <h4>Culture</h4>
+            </div>
+            <div class="box">
+                <img src="./Images/Basilica-Santo-Nino-.webp" alt="Culture">
+                <h4>Culture</h4>
+            </div>
+            
         </section>
     <div class="footer"> 
         <footer id="contacts"> 
