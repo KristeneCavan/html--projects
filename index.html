@@ -12,6 +12,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
+        body{
+            padding: 0;
+            margin: 0;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: overlay; 
+            margin: 0; 
+            padding: 0 ;  
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+            text-align: left;
+            }
+        }
         *{
             margin: 0px;
             padding: 0px;
@@ -29,6 +43,13 @@
             padding: 15px 200px;
             transition: 0.5s ease;
             font-family: "Poppins", serif;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: screen;
+            padding: 10px 20px;
+            text-align:left;
+            display: flex  ;
+            }
         }
         header .brand{
             color: #fff;
@@ -44,10 +65,17 @@
             position: relative;
             color: #fff;
             font-size: 1.5em;
-            font-weight: 500;
+            font-weight: 400;
             text-decoration: none;
             margin-left: 30px;
             transition: 0.3 ease;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+                position: relative;
+                font-size: large ;
+            font-weight: 400;
+            mix-blend-mode: overlay;   
+            }
         }
         header .navigation .navigation-items a:before{
             content: '';
@@ -78,7 +106,14 @@
             background-position: center;
             background-size: cover;
             font-family: "Poppins", serif;
-
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: screen;
+            padding: 10px 20px;
+            text-align:left;
+            display: flex  ;
+            position: absolute;
+            }
         }
         .home::before{
             z-index: 777;
@@ -158,9 +193,10 @@
             justify-items: center;
             align-items: center;
             transform: translate(80p);
-            margin-bottom: 12px;
+            margin-bottom: 100px;
         }
         .slider-nav .nav-btn{
+            padding: 2 0px;
             width: 12px;
             height: 12px;
             background: #fff;
@@ -181,6 +217,10 @@
             height: auto; 
             padding: 50px 100px; 
             background: #000000; 
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            visibility: collapse; ;
+            }
         }
         footer .container{ 
             width: 100%; 
@@ -337,6 +377,7 @@
         <div class="nav-btn"></div>
     </div>
     </section>
+    <section class="foot">
     <div class="footer"> 
         <footer id="contacts"> 
         <div class="container">
@@ -376,6 +417,7 @@
          information, resources, and activities to support learning and personal growth. 
          All content is designed to enhance knowledge and skills in a safe, respectful 
          environment. </p> 
+    </section>
     </div> 
     </div> 
     </footer> 
