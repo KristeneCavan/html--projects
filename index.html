@@ -53,9 +53,6 @@
 .slider-wrapper .slider-item:nth-child(4):before{
     background-image: url(./Images/Basilica-Santo-Nino-.webp);
 }
-.slider-wrapper .slider-item:nth-child(5):before{
-    background-image: url(./Images/Tops.webp);
-}
 .slider-wrapper .slider-item .slider-content{
     color: #fff;
     z-index: 20;
@@ -134,6 +131,12 @@
     padding: 20px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+.slider-item swiper-slide{
+    transition: all 0.4s;
+}
+.slider-item swiper-slide:hover{
+    transform:  scale(1.3s);
+}
 </style>
 </head>
     <div class="slider-container">
@@ -174,21 +177,10 @@
                     <a href="destination.html" class="slide-button"><span>Explore Now!</span></a>
                 </div>
             </div>
-            <div class="slider-item swiper-slide">
-                <div class="slider-content">
-                    <h3 class="slide-subtitle"> Slide 05</h3>
-                    <h2 class="slide-title">DiscoverCebu</h2>
-                    <p class="slide-description">
-                        Explore the Wonders of Cebu City and Discover Amazing Sites</p>
-                    <a href="destination.html" class="slide-button"><span>Explore Now!</span></a>
-                </div>
-            </div>
         </div>
         <div class="slider-controls">
             <div class="slider-pagination">
                 <div class="slider-indicator"></div>
-                <li class="slider-tab">Lorem ipsum dolor sit amet       
-                </li>
                 <li class="slider-tab">Lorem ipsum dolor sit amet       
                 </li>
                 <li class="slider-tab">Lorem ipsum dolor sit amet       
