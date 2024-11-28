@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AboutCebu</title>
+    <title>DiscoverCebu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<script type="text/javascript" src="script.js"></script>   
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
+        body{
+            padding: 0;
+            margin: 0;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: overlay; 
+            margin: 0; 
+            padding: 0 ;  
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+            text-align: left;
+            }
+        }
         *{
             margin: 0px;
-            padding: 0px;
+            padding: 0px; 
         }
         header{
             z-index: 999;
@@ -27,6 +42,13 @@
             padding: 15px 200px;
             transition: 0.5s ease;
             font-family: "Poppins", serif;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: screen;
+            padding: 10px 20px;
+            text-align:left;
+            display: flex  ;
+            }
         }
         header .brand{
             color: #fff;
@@ -37,6 +59,36 @@
         }
         header .navigation{
             position: relative;
+        }
+        header .navigation .navigation-items a{
+            position: relative;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: 400;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: 0.3 ease;
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+                position: relative;
+                font-size: large ;
+            font-weight: 400;
+            mix-blend-mode: overlay;   
+            }
+        }
+        header .navigation .navigation-items a:before{
+            content: '';
+            position: absolute;
+            background: #545151;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            font-family: "Poppins", serif;
+        }
+        header .navigation .navigation-items a:hover:before{
+            width: 100%;
+            background: #fff;
         }
         section{
             padding: 100px 200px;
@@ -49,12 +101,27 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Images/sinulog.webp);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             font-family: "Poppins", serif;
-
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            mix-blend-mode: screen;
+            padding: 10px 20px;
+            text-align:left;
+            display: flex  ;
+            position: absolute;
+            }
+        }
+        .home::before{
+            z-index: 777;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
         }
         .home .content{
             z-index: 888;
@@ -99,7 +166,7 @@
             transition: 0.5s ease;
         }
         .home .media-icons a{
-            color: #000;
+            color: #fff;
             font-size: 1.6em;
             transition: 0.3s ease
         }
@@ -109,12 +176,50 @@
         .home .media-icons a:hover{
             transform: scale(1.3);
         }
+        .home video{
+            z-index: 000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider-nav{
+            z-index: 888;
+            position: relative;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            transform: translate(80p);
+            margin-bottom: 100px;
+        }
+        .slider-nav .nav-btn{
+            padding: 2 0px;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+            transition: 0.3 ease;
+        }
+        .slider-nav .nav-btn:not(:last-child){
+            margin-right: 20px;
+        }
+        .slider-nav .nav-btn:hover{
+            transform: scale(1.2);
+        }
         footer{
             position: relative; 
             width: 100%; 
             height: auto; 
             padding: 50px 100px; 
             background: #000000; 
+            @media screen and (max-width:1024px) and (min-width:480px) 
+            {
+            visibility: collapse; ;
+            }
         }
         footer .container{ 
             width: 100%; 
@@ -234,211 +339,7 @@
             display: inline-block; 
             transition: 0.5s; 
         }
-        .titlebar {
-      background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 99;
-      border-bottom: solid black 3px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      align-items: center;
-      width: 200px;
-      height: 200px;
-      height: 55px;
-      max-width: 100%; 
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .nav-button {
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.5rem;
-      background-color: #fff;
-      border-radius: 0.25rem;
-      border: 0.1rem solid #fff;
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-      transition: 0.5s;
-    }
-
-    .nav-button img {
-      width: 20px;
-    }
-
-    .nav-button span {
-      font-size: 1.1rem;
-    }
-
-    .nav-button:hover {
-      background-color: #fff;
-      border: solid #fff;
-    }
-    .nav-button:hover .menu {
-      display: block;
-    }
-    .menu {
-      display: none;
-      position: absolute;
-      top: 110%;
-      left: 0;
-      right: 0;
-      background-color: black;
-      padding: 10px 0;
-      text-align: center;
-      min-width: 100%;
-      transition: 0.5s;
-    }
-
-    .menu a {
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: block;
-      transition: 0.5s;
-    }
-
-    .menu a:hover {
-      background-color: darkgray;
-    }
-    .titlebar {
-      
-      align-items: right;
-      position: sticky;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 99;
-      border-bottom: solid #545151 3px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      align-items: center;
-      width: 200px;
-      height: 200px;
-      height: 55px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .nav-button {
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.5rem;
-      background-color: black;
-      border-radius: 0.25rem;
-      border: 0.1rem solid black;
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-      transition: 0.5s;
-    }
-
-    .nav-button img {
-      width: 20px;
-    }
-
-    .nav-button span {
-      font-size: 1.1rem;
-    }
-
-    .nav-button:hover {
-      background-color: #080051c0;
-      border: solid #080051c0;
-    }
-
-    /* Dropdown Menu */
-
-    .menu {
-      display: none;
-      position: absolute;
-      top: 110%;
-      left: 0;
-      right: 0;
-      background-color: black;
-      padding: 10px 0;
-      text-align: center;
-      min-width: 100%;
-      transition: 0.5s;
-    }
-
-    .menu a {
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: block;
-      transition: 0.5s;
-    }
-
-    .menu a:hover {
-      background-color: darkgray;
-    }
-    .nav-button:hover .menu {
-      display: block;
-    }
-    .center-text{
-        text-align: center;
-    }
-    .center-text h4{
-        font-size: var(--h2-font);
-        font-weight: 800;
-    }
-    .tour{
-        background-color: #000;
-    }
-    .tour-content{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-        align-items: center;
-        gap: 3rem;
-        margin-top: 5rem;
-    }
-    .box{
-        position: relative;
-    }
-    .box img{
-        width: 500px;
-        height: 700px;
-        object-fit: cover;
-        border-radius: 10px;
-        filter: brightness(70%);
-        transition: all .3s cubic-bezier(.499, .05, .55, .95);
-        will-change: filter;
-        display: block;
-    }
-    .box h1{
-        position: absolute; 
-        left: 25px;
-        bottom: 95px;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .box img:hover{
-        filter: brightness(90%) hue-rotate(50deg);
-        transform: scale(1.10);
-        cursor: pointer;
-    }
-    .box h2{
-        color: #fff;
-        display: block;
-        object-fit: cover;
-        padding: 50px;
-    }
+          
     </style>
 </head>
 <body>
@@ -446,81 +347,36 @@
         <a href="index.html" class="brand">Discover Cebu</a>
         <div class="menu-btn"></div>
         <div class="navigation">
-        </div>
-        <div class="titlebar"> 
-        <div class="nav-button">
-        <img src="./Images/menu-logo.png" alt="Menu-icon">
-              <span>Menu</span>
-              <div class="menu">
+        <div class="navigation-items">  
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="destination.html">Destination</a>
-                <a href="contact.html">Contacts</a>
-              </div>
-            </div>
-          </div>
+                <a href="contact.html">Contact</a>
+        </div>
+        </div>
     </header>
     <section class="home">
-        <div class="content">
-            <h1>Tour<br><span>Cebu</span></h1>
-            <h1><Discover class="br"></Discover></h1>
-            <p><p>Cebu City, city, Cebu Island, south-central Philippines.
-                Located on Cebu Islands eastern coast, it is protected by 
-                offshore Mactan Island and by the inland Cordillera Central.
-                It is one of the countrys largest cities and is a bustling
-                port. Its harbour is provided by the sheltered strait between
-                Mactan Island and the coast.
-                </p></p>
-        </div>
-        </section>
-    <section class="tour">
-        <div class="center-text">
-            <h2><Discover class="br"></Discover></h2>
-        </div>
-        <div class="tour-content">
-            <div class="box">
-                <img src="./Images/Magellans-Cross.webp" alt="Culture">
-                <h2>Culture</h2>
-            </div>
-            <div class="box">
-                <img src="./Images/Tops.webp" alt="Culture">
-                <h2>Places</h2>
-            </div>
-            <div class="box">
-                <img src="./Images/Basilica-Santo-Nino-.webp" alt="Culture">
-                <h2>Festival</h2>
-            </div>
-            <div class="p">
-                <li style="font-size: large;"><a href="http://">Culture</a></li>
-                  <p>The most densely populated island in the Philippines, Cebu is a progressive cultural hub.
-                  Cebuano culture has been influenced by Spanish culture and indigenous Philippine traditions 
-                  and while Chinese religion has slowly seeped in, the majority of the population are Roman 
-                  Catholic. While Filipino (Tagalog) is the official language here, youll hear Cebuano, 
-                  the native language of Cebu and most of the central and southern Philippines widely spoken.
-                  </p>
-                  </div>
-                  <br>
-                  <img style=" width: 800px;height: 300px; border: solid black;" src="./Images/17.jfif" alt="Culture">
-                  <hr>
-                  <div class="p">
-                <li><a href="about2.html">Places</a></li>
-                  <p>Cebu City is politically subdivided into 80 barangays.[1][2]
-                  The city is divided into two legislative districts, with 46 barangays to the north (1st District)
-                  and 34 barangays to the south (2nd District), for the purposes of electing members to the House 
-                  of Representatives of the Philippines and the Sangguniang Panlungsod.
-                  As of the 2020 census, 58 barangays are classified as urban barangays where
-                  888,481 (92.15%) of Cebu City's population lives, while the remaining 22 rural 
-                  barangays are home to 75,668 residents, representing 7.85% of the total population.[3]</p>
-                  </div>
-                  <br>
-                <img style="  width: 800px;height: 300px; border: solid black;" src="./Images/16.jfif" alt="Places">
-                  <hr>
-                  <div class="p">
-                  <li><a href="http://">Festival</a></li>
-                  <p>The Sinulog-Santo Niño Festival (as known as Sinug and Sulog) is an annual cultural and religious
-                  festival held on the third Sunday of January in Cebu, with the center of the activities being in Cebu City,
-                  and is the centre of the Santo Niño Christian celebrations in the Philippines.</p>               </div>    
-        </section>
+        <video class="video-slide" src="./Images/IMG_0246.MP4" autoplay muted loop></video>
+    <div class="content">
+        <h1>Discover.<br><span>Cebu</span></h1>
+        <h1><Discover class="br"></Discover></h1>
+        <p>Explore the Wonders of Cebu City and Discover Amazing Sites</p>
+        <a href="destination.html">Explore Now!</a>
+    </div>
+    <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-nav">
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+    </div>
+    </section>
+    <section class="foot">
     <div class="footer"> 
         <footer id="contacts"> 
         <div class="container">
@@ -543,8 +399,9 @@
     <h2>Website</h2>
          <ul>
              <li><a href="index.html">Home</a></li> 
-             <li><a href="about.html">About</a></li> 
-             <li><a href="destination.html">Destination</a></li>
+             <li><a href="about1.html">About</a></li> 
+             <li><a href="about1.html">Trips</a></li> 
+             <li><a href="about2.html">Destination</a></li>
              <li><a href="contact.html">Contact</a></li> 
          </ul> 
     </div> 
@@ -559,6 +416,7 @@
          information, resources, and activities to support learning and personal growth. 
          All content is designed to enhance knowledge and skills in a safe, respectful 
          environment. </p> 
+    </section>
     </div> 
     </div> 
     </footer> 
@@ -566,8 +424,6 @@
     <div class="copyright"> 
          <p> 2024 <a href="index.html" class="link">Discover. Cebu</a> All rights reserved. 
          <a href="contact.html" class="link">Contact us</a></p> 
-    </div> 
-    <div>
-    
+    </div>
 </body>
 </html>
