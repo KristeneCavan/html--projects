@@ -21,6 +21,7 @@
     font-family: "Poppins", serif;
 }
 .slider-container{
+    position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -105,9 +106,36 @@
     position: absolute;
     bottom: 45px;
 }
+.slider-container .slider-controls{
+    position: absolute;
+    bottom: 45px;
+    z-index: 20;
+    width: 100%;
+}
+.slider-controls .slider-pagination{
+    display: flex;
+    margin: 0 auto; 
+    padding: 0 20px 10px;
+    max-width: 1400px;
+    list-style: none;
+    justify-content: space-between;
+}
+.slider-pagination .slider-indicator{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+.slider-pagination .slider-tab{
+    color: #fff;
+    font-size: 0.85rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 </style>
 </head>
-<body>
     <div class="slider-container">
         <div class="slider-wrapper swiper-wrapper">
             <div class="slider-item swiper-slide">
@@ -154,6 +182,21 @@
                         Explore the Wonders of Cebu City and Discover Amazing Sites</p>
                     <a href="destination.html" class="slide-button"><span>Explore Now!</span></a>
                 </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <div class="slider-pagination">
+                <div class="slider-indicator"></div>
+                <li class="slider-tab">Lorem ipsum dolor sit amet       
+                </li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet       
+                </li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet       
+                </li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet       
+                </li>
+                <li class="slider-tab">Lorem ipsum dolor sit amet       
+                </li>
             </div>
         </div>
     </div>
