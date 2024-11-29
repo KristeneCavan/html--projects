@@ -135,6 +135,7 @@ header .navbar {
 .hero-section {
   min-height: 100vh;
   background-image: url(Images/backgroundd.jpg);
+  display: flex;
 }
 
 .hero-section .section-content {
