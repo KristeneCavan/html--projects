@@ -13,7 +13,7 @@
   --white-color: #fff;
   --dark-color: #252525;
   --primary-color: #02052e;
-  --secondary-color: #1cf3e8;
+  --secondary-color: #242dad;
   --light-pink-color: #faf4f5;
   --medium-gray-color: #ccc;
 
@@ -82,7 +82,7 @@ section .section-title::after {
   height: 5px;
   display: block;
   margin: 10px auto 0;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: var(--border-radius-s);
 }
 
@@ -134,7 +134,7 @@ header .navbar {
 /* Hero section styling */
 .hero-section {
   min-height: 100vh;
-  background: var(--primary-color);
+  background-image: url(Images/backgroundd.jpg);
 }
 
 .hero-section .section-content {
@@ -151,13 +151,14 @@ header .navbar {
 
 .hero-section .hero-details .title {
   font-size: var(--font-size-xxl);
-  color: var(--secondary-color);
-  font-family: "Miniver", sans-serif;
+  color: var(--white-color);
+  font-family: "Poopins", sans-serif;
 }
 
 .hero-section .hero-details .subtitle {
   margin-top: 8px;
   max-width: 70%;
+  color: var(--white-color);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
 }
@@ -166,6 +167,7 @@ header .navbar {
   max-width: 70%;
   margin: 24px 0 40px;
   font-size: var(--font-size-m);
+  color: var(--white-color);
 }
 
 .hero-section .hero-details .buttons {
@@ -178,8 +180,8 @@ header .navbar {
   display: block;
   border: 2px solid transparent;
   border-radius: var(--border-radius-m);
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white-color);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
   transition: 0.3s ease;
@@ -188,14 +190,14 @@ header .navbar {
 .hero-section .hero-details .button:hover,
 .hero-section .hero-details .button.contact-us {
   color: var(--white-color);
-  border-color: var(--white-color);
-  background: transparent;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .hero-section .hero-details .button.contact-us:hover {
-  color: var(--primary-color);
-  background: var(--secondary-color);
-  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background: var(--white-color);
+  border-color: var(--white-color);
 }
 
 .hero-section .hero-image-wrapper {
@@ -206,7 +208,7 @@ header .navbar {
 /* About section styling */
 .about-section {
   padding: 120px 0;
-  background: var(--light-pink-color);
+  background: var(--primary-color);
 }
 
 .about-section .section-content {
@@ -229,6 +231,7 @@ header .navbar {
 
 .about-section .about-details .section-title {
   padding: 0;
+  color: var(--light-pink-color);
 }
 
 .about-section .about-details .text {
@@ -236,6 +239,7 @@ header .navbar {
   margin: 50px 0 30px;
   text-align: center;
   font-size: var(--font-size-m);
+  color: var(--light-pink-color);
 }
 
 .about-section .social-link-list {
@@ -245,19 +249,20 @@ header .navbar {
 }
 
 .about-section .social-link-list .social-link {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--light-pink-color);
   font-size: var(--font-size-l);
   transition: 0.2s ease;
 }
 
 .about-section .social-link-list .social-link:hover {
-  color: var(--secondary-color);
+  color: var(--light-pink-color);
 }
 
 /* Menu section styling */
 .menu-section {
   color: var(--white-color);
-  background: var(--dark-color);
+  background: var(--primary-color);
   padding: 50px 0 100px;
 }
 
@@ -298,7 +303,8 @@ header .navbar {
 /* Testimonials section styling */
 .testimonials-section {
   padding: 50px 0 100px;
-  background: var(--light-pink-color);
+  background: var(--primary-color);
+  color:  var(--light-pink-color);
 }
 
 .testimonials-section .slider-wrapper {
@@ -337,28 +343,31 @@ header .navbar {
   width: 15px;
   height: 15px;
   opacity: 1;
-  background: var(--secondary-color);
+  background: var(--light-pink-color);
 }
 
 .testimonials-section .swiper-slide-button {
-  color: var(--secondary-color);
+  color: var(--light-pink-color);
   margin-top: -50px;
   transition: 0.3s ease;
 }
 
 .testimonials-section .swiper-slide-button:hover {
-  color: var(--primary-color);
+  color: var(--light-pink-color);
 }
 
 /* Gallery section styling */
 .gallery-section {
   padding: 50px 0 100px;
+  background-color: var(--primary-color);
+  color: var(--light-pink-color);
 }
 
 .gallery-section .gallery-list {
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
+  color: var(--light-pink-color);
 }
 
 .gallery-section .gallery-list .gallery-item {
@@ -381,7 +390,8 @@ header .navbar {
 /* Contact section styling */
 .contact-section {
   padding: 50px 0 100px;
-  background: var(--light-pink-color);
+  background: var(--primary-color);
+  color: var(--light-pink-color);
 }
 
 .contact-section .section-content {
@@ -389,6 +399,8 @@ header .navbar {
   gap: 48px;
   align-items: center;
   justify-content: space-between;
+  background: var(--medium-gray-color-color);
+  color: var(--light-pink-color);
 }
 
 .contact-section .contact-info-list .contact-info {
@@ -396,10 +408,14 @@ header .navbar {
   gap: 20px;
   margin: 20px 0;
   align-items: center;
+  background: var(--medium-gray-color-color);
+  color: var(--light-pink-color);
 }
 
 .contact-section .contact-info-list .contact-info i {
   font-size: var(--font-size-m);
+  background: var(--medium-gray-color-color);
+  color: var(--light-pink-color);
 }
 
 .contact-section .contact-form .form-input {
@@ -415,6 +431,8 @@ header .navbar {
 
 .contact-section .contact-form {
   max-width: 50%;
+  background: var(--medium-gray-color-color);
+  color: var(--light-pink-color);
 }
 
 .contact-section .contact-form textarea.form-input {
